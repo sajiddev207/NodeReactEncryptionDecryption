@@ -1,0 +1,37 @@
+@URL = http://localhost:8000
+@token = eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySWQiOiI2NDNiMGY4MzM2ZjgzNGI3NmIzNWU3MTkiLCJ1c2VyTmFtZSI6InRlc3QwNiIsImlhdCI6MTY4NDA5MTE5MSwiZXhwIjoxNjg0MjYzOTkxfQ.Ep-yykDDxrR3UECuFjEe0UHW9eo2zEkvstGrc6mDysc
+
+### User Register API
+POST {{URL}}/api/user/registerUser
+Content-Type: application/json
+
+{
+    "email":"test06@mailinator.com",
+    "mobileNo":"2222222222",
+    "userName":"test06",
+    "password":"123456",
+    "confirmPassword":"123456"
+}
+
+### User Validate OTP API
+POST {{URL}}/api/user/validateOtp
+Content-Type: application/json
+
+{
+    "token":"vKjibZ5UgIWRp8QXUfo5gSl74CgX1nlUVAkLxEDs",
+    "otp":"704845"
+}
+
+### User Login API
+POST {{URL}}/api/user/login
+Content-Type: application/json
+
+{
+    "userName":"test06",
+    "password":"123456"
+}
+
+### User Validate OTP API
+POST {{URL}}/api/user/getUserList
+Content-Type: application/json
+Authorization: Bearer {{token}}
